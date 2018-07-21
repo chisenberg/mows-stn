@@ -18,23 +18,24 @@ int main(void)
 	Battery *battery = new Battery();
 	Pulse433 *pulse433 = new Pulse433(pinRf433);
 
-	uint8_t msg[]={0xFF,0xE0,0xEF,0xE0,0x34,0x56,0x79,0xE0};
+	uint8_t *msg = (uint8_t*) calloc(8, sizeof(uint8_t));
 
 	uint8_t msgNumber = 0;
 
+
 	while(1) {
 
-		ctimer->waitMillis(1000);
-				
-		// dht22->read();
-
-		// msg[0] = dht22->temperature >> 8;
-		// msg[1] = dht22->temperature & 0x00FF;
-		// msg[2] = dht22->humidity >> 8;
-		// msg[3] = dht22->humidity & 0x00FF;
+		ctimer->waitMillis(500);				
+		dht22->read();
+		ctimer->waitMillis(500);
 
 		msg[0] = msgNumber++;
 		msg[1] = battery->readVoltage();
+
+		msg[2] = dht22->temperature >> 8;
+		msg[3] = dht22->temperature & 0x00FF;
+		msg[4] = dht22->humidity >> 8;
+		msg[5] = dht22->humidity & 0x00FF;
 
 		pulse433->sendMsg(msg);
 	}
