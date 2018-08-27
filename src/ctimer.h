@@ -10,12 +10,13 @@
 #include "new.h"
 
 // https://ucexperiment.wordpress.com/2012/03/16/examination-of-the-arduino-millis-function/
-#define MICROSECONDS_PER_TICK 4
-#define MICROSECONDS_PER_TIMER0_OVERFLOW 1024
-#define MILLIS_INC (MICROSECONDS_PER_TIMER0_OVERFLOW / 1000) // 1.024 = 1
-// the fractional number of milliseconds per timer0 overflow. we shift right
-// by three to fit these numbers into a byte.
-#define FRACT_INC ((MICROSECONDS_PER_TIMER0_OVERFLOW % 1000) >> 3) // (24 >> 3) = 3
+#define TIMER1_PRESCALAR 32
+#define clockCyclesPerMicrosecond() ( F_CPU / 1000000L )
+#define clockCyclesToMicroseconds(a) ( ((a) * 1000L) / (F_CPU / 1000L) )
+#define MICROSECONDS_PER_TICK ( TIMER1_PRESCALAR / clockCyclesPerMicrosecond() )
+#define MICROSECONDS_PER_TIMER1_OVERFLOW ( clockCyclesToMicroseconds( TIMER1_PRESCALAR * 256 ) )
+#define MILLIS_INC (MICROSECONDS_PER_TIMER1_OVERFLOW / 1000) // 1.024 = 1
+#define FRACT_INC ((MICROSECONDS_PER_TIMER1_OVERFLOW % 1000) >> 3) // (24 >> 3) = 3
 #define FRACT_MAX (1000 >> 3) // (1000 >> 3) 125
 
 class Ctimer

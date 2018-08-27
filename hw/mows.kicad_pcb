@@ -1,9 +1,6 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.7)
+(kicad_pcb (version 20171130) (host pcbnew 5.0.0)
 
   (general
-    (links 39)
-    (no_connects 0)
-    (area 124.384999 72.314999 171.525001 123.265001)
     (thickness 1.6)
     (drawings 4)
     (tracks 113)
@@ -14,7 +11,7 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal)
+    (0 F.Cu signal hide)
     (31 B.Cu signal)
     (32 B.Adhes user)
     (33 F.Adhes user)
@@ -66,6 +63,9 @@
     (pcbplotparams
       (layerselection 0x010f0_80000001)
       (usegerberextensions false)
+      (usegerberattributes false)
+      (usegerberadvancedattributes false)
+      (creategerberjobfile false)
       (excludeedgelayer true)
       (linewidth 0.100000)
       (plotframeref false)
@@ -74,8 +74,7 @@
       (useauxorigin false)
       (hpglpennumber 1)
       (hpglpenspeed 20)
-      (hpglpendiameter 15)
-      (hpglpenoverlay 2)
+      (hpglpendiameter 15.000000)
       (psnegative false)
       (psa4output false)
       (plotreference true)
@@ -87,7 +86,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ../../../../../../home/christian/mows/))
+      (outputdirectory "../../../../../../home/christian/mows/"))
   )
 
   (net 0 "")
@@ -369,7 +368,7 @@
     (pad 1 thru_hole rect (at 0 0 90) (size 0.9 1.5) (drill 0.6) (layers *.Cu *.Mask)
       (net 2 GND))
     (model ${KISYS3DMOD}/TO_SOT_Packages_THT.3dshapes/TO-92_Inline_Narrow_Oval.wrl
-      (at (xyz 0.05 0 0))
+      (offset (xyz 1.269999980926514 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 -90))
     )
@@ -817,7 +816,7 @@
     (fp_text reference J2 (at 0 -2.54 270) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value STX882 (at 5.08 -5.08 450) (layer F.Fab)
+    (fp_text value STX882 (at 5.08 -5.08 90) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.635 -1.27) (end 1.27 -1.27) (layer F.Fab) (width 0.1))
@@ -835,7 +834,7 @@
     (fp_line (start -1.8 6.85) (end 1.8 6.85) (layer F.CrtYd) (width 0.05))
     (fp_line (start 1.8 6.85) (end 1.8 -1.8) (layer F.CrtYd) (width 0.05))
     (fp_line (start 1.8 -1.8) (end -1.8 -1.8) (layer F.CrtYd) (width 0.05))
-    (fp_text user %R (at 2.54 2.54 450) (layer F.Fab)
+    (fp_text user %R (at 2.54 2.54 90) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad 1 thru_hole rect (at 0 0 270) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)

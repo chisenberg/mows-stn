@@ -8,8 +8,9 @@ uint8_t Ctimer::timer0_fract = 0;
 Ctimer::Ctimer(){
 	TCNT1 = 0; // zeroes
 	TCCR1 = 0x00; // stop
-	TCCR1 |= (1 << CS12) | (1 << CS11); // 32 precalar tiny85
-	TIMSK = (1 << TOIE1); // enable overflow interrupt // tiny85
+	// TCCR1 |= (1 << CS12) | (1 << CS11) | (1 << CS10); // 64 prescalar
+	TCCR1 |= (1 << CS12) | (1 << CS11); // 32 prescalar
+	TIMSK = (1 << TOIE1); // enable overflow interrupt
 	
 	sei(); // enable ISR
 }
@@ -75,6 +76,6 @@ void Ctimer::waitMicros(uint32_t micros)
 	// witchcraft 18 micros less than required
 	uint32_t end_time = Ctimer::micros() + micros - 18; 
 	while(Ctimer::micros() < end_time) {
-		_delay_us(4);
+		_delay_us(MICROSECONDS_PER_TICK);
 	}
 }

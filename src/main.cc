@@ -1,10 +1,10 @@
 
 #include <inttypes.h>
 #include "ctimer.h"
+#include "pin.h"
 #include "pulse433.h"
 #include "dht22.h"
 #include "battery.h"
-#include "pin.h"
 
 // bat = (analog * (3,3/256)) * 1,45
 
