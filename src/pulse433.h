@@ -23,7 +23,7 @@ private:
 public:
 	Pulse433(Pin*);
 	void sendMsg(uint8_t *);
-	void sendPreamble();
+	void sendPulse();
 	void sendByte(uint8_t byte);
     uint8_t getCheckSum(uint8_t *data);
 };
