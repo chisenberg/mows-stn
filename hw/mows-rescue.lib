@@ -1,36 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_Generic_Conn_01x05
+# +3.3V-mows-rescue
 #
-DEF Connector_Generic_Conn_01x05 J 0 40 Y N 1 F N
-F0 "J" 0 300 50 H V C CNN
-F1 "Connector_Generic_Conn_01x05" 0 -300 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*:*_1x??_*
-$ENDFPLIST
-DRAW
-S -50 -195 0 -205 1 1 6 N
-S -50 -95 0 -105 1 1 6 N
-S -50 5 0 -5 1 1 6 N
-S -50 105 0 95 1 1 6 N
-S -50 205 0 195 1 1 6 N
-S -50 250 50 -250 1 1 10 f
-X Pin_1 1 -200 200 150 R 50 50 1 1 P
-X Pin_2 2 -200 100 150 R 50 50 1 1 P
-X Pin_3 3 -200 0 150 R 50 50 1 1 P
-X Pin_4 4 -200 -100 150 R 50 50 1 1 P
-X Pin_5 5 -200 -200 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# mows-rescue_+3.3V-mows-rescue
-#
-DEF mows-rescue_+3.3V-mows-rescue #PWR 0 0 Y Y 1 F P
+DEF +3.3V-mows-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "mows-rescue_+3.3V-mows-rescue" 0 140 50 H V C CNN
+F1 "+3.3V-mows-rescue" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -41,11 +16,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# mows-rescue_+3V3-mows-rescue
+# +3V3-mows-rescue
 #
-DEF mows-rescue_+3V3-mows-rescue #PWR 0 0 Y Y 1 F P
+DEF +3V3-mows-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "mows-rescue_+3V3-mows-rescue" 0 140 50 H V C CNN
+F1 "+3V3-mows-rescue" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -56,11 +31,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# mows-rescue_+BATT-mows-rescue
+# +BATT-mows-rescue
 #
-DEF mows-rescue_+BATT-mows-rescue #PWR 0 0 Y Y 1 F P
+DEF +BATT-mows-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "mows-rescue_+BATT-mows-rescue" 0 140 50 H V C CNN
+F1 "+BATT-mows-rescue" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -71,11 +46,11 @@ X +BATT 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# mows-rescue_ATTINY85-20PU-mows-rescue
+# ATTINY85-20PU-mows-rescue
 #
-DEF mows-rescue_ATTINY85-20PU-mows-rescue U 0 40 Y Y 1 F N
+DEF ATTINY85-20PU-mows-rescue U 0 40 Y Y 1 F N
 F0 "U" -1150 400 50 H V C CNN
-F1 "mows-rescue_ATTINY85-20PU-mows-rescue" 1000 -400 50 H V C CNN
+F1 "ATTINY85-20PU-mows-rescue" 1000 -400 50 H V C CNN
 F2 "Housings_DIP:DIP-8_W7.62mm" 1000 0 50 H I C CIN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -91,11 +66,11 @@ X VCC 8 1350 250 150 L 40 40 1 1 W
 ENDDRAW
 ENDDEF
 #
-# mows-rescue_Conn_01x02-mows-rescue
+# Conn_01x02-mows-rescue
 #
-DEF mows-rescue_Conn_01x02-mows-rescue J 0 40 Y N 1 F N
+DEF Conn_01x02-mows-rescue J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "mows-rescue_Conn_01x02-mows-rescue" 0 -200 50 H V C CNN
+F1 "Conn_01x02-mows-rescue" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -115,11 +90,11 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# mows-rescue_Conn_01x03-mows-rescue
+# Conn_01x03-mows-rescue
 #
-DEF mows-rescue_Conn_01x03-mows-rescue J 0 40 Y N 1 F N
+DEF Conn_01x03-mows-rescue J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "mows-rescue_Conn_01x03-mows-rescue" 0 -200 50 H V C CNN
+F1 "Conn_01x03-mows-rescue" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -141,11 +116,43 @@ X Pin_3 3 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# mows-rescue_D_Schottky-mows-rescue
+# Conn_01x06-mows-rescue
 #
-DEF mows-rescue_D_Schottky-mows-rescue D 0 40 N N 1 F N
+DEF Conn_01x06-mows-rescue J 0 40 Y N 1 F N
+F0 "J" 0 300 50 H V C CNN
+F1 "Conn_01x06-mows-rescue" 0 -400 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 -295 0 -305 1 1 6 N
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 205 0 195 1 1 6 N
+S -50 250 50 -350 1 1 10 f
+X Pin_1 1 -200 200 150 R 50 50 1 1 P
+X Pin_2 2 -200 100 150 R 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 -200 -100 150 R 50 50 1 1 P
+X Pin_5 5 -200 -200 150 R 50 50 1 1 P
+X Pin_6 6 -200 -300 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# D_Schottky-mows-rescue
+#
+DEF D_Schottky-mows-rescue D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "mows-rescue_D_Schottky-mows-rescue" 0 -100 50 H V C CNN
+F1 "D_Schottky-mows-rescue" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -164,11 +171,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# mows-rescue_GND-mows-rescue
+# GND-mows-rescue
 #
-DEF mows-rescue_GND-mows-rescue #PWR 0 0 Y Y 1 F P
+DEF GND-mows-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "mows-rescue_GND-mows-rescue" 0 -150 50 H V C CNN
+F1 "GND-mows-rescue" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -177,11 +184,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# mows-rescue_MCP1700-3302E_TO92-mows-rescue
+# MCP1700-3302E_TO92-mows-rescue
 #
-DEF mows-rescue_MCP1700-3302E_TO92-mows-rescue U 0 10 Y Y 1 F N
+DEF MCP1700-3302E_TO92-mows-rescue U 0 10 Y Y 1 F N
 F0 "U" -150 -125 50 H V C CNN
-F1 "mows-rescue_MCP1700-3302E_TO92-mows-rescue" 0 -125 50 H V L CNN
+F1 "MCP1700-3302E_TO92-mows-rescue" 0 -125 50 H V L CNN
 F2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" 0 -200 50 H I C CIN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -195,11 +202,11 @@ X VO 3 300 0 100 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
-# mows-rescue_R-mows-rescue
+# R-mows-rescue
 #
-DEF mows-rescue_R-mows-rescue R 0 0 N Y 1 F N
+DEF R-mows-rescue R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "mows-rescue_R-mows-rescue" 0 0 50 V V C CNN
+F1 "R-mows-rescue" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
