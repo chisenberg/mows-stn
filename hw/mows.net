@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /chdata/code/projects/mows-stn/hw/mows.sch)
-    (date "Thu 24 Oct 2019 11:55:58 AM -03")
+    (date "Thu 24 Oct 2019 02:24:42 PM -03")
     (tool "Eeschema 5.1.4")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -113,7 +113,7 @@
       (tstamp 5A466099))
     (comp (ref J1)
       (value Conn_01x05)
-      (footprint Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical)
+      (footprint Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical)
       (datasheet ~)
       (libsource (lib Connector_Generic) (part Conn_01x05) (description "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"))
       (sheetpath (names /) (tstamps /))
