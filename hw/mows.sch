@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:mows-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -557,7 +556,7 @@ Wire Wire Line
 Wire Wire Line
 	950  1200 1250 1200
 $Comp
-L Connector_Generic:Conn_01x05 J1
+L mows-rescue:Conn_01x05-Connector_Generic J1
 U 1 1 5DB2544D
 P 1400 2200
 F 0 "J1" H 1480 2242 50  0000 L CNN

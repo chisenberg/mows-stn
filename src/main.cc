@@ -25,7 +25,7 @@ int main(void)
 
 	while(1) {
 
-		ctimer->waitMillis(500);				
+		ctimer->waitMillis(3000);				
 		dht22->read();
 		ctimer->waitMillis(500);
 

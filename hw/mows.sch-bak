@@ -562,7 +562,7 @@ U 1 1 5DB2544D
 P 1400 2200
 F 0 "J1" H 1480 2242 50  0000 L CNN
 F 1 "Conn_01x05" H 1480 2151 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 1400 2200 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 1400 2200 50  0001 C CNN
 F 3 "~" H 1400 2200 50  0001 C CNN
 	1    1400 2200
 	1    0    0    -1  
