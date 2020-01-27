@@ -12,7 +12,6 @@ private:
 	volatile uint8_t* portAddr;
 	volatile uint8_t* ddrAddr;
 	volatile uint8_t* pinAddr;
-	uint8_t inverted;
 
 public:
 	// constructor
@@ -20,8 +19,7 @@ public:
 		volatile uint8_t* _portAddr,
 		volatile uint8_t* _ddrAddr,
 		volatile uint8_t* _pinAddr,
-		uint8_t _pinNo,
-		uint8_t _inverted );
+		uint8_t _pinNo);
 
 	void output();
 	void input();

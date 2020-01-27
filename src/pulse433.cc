@@ -6,15 +6,15 @@ Pulse433::Pulse433(Pin *pin){
     this->pin->output();
 }
 
-void Pulse433::sendMsg(uint8_t *data) {
+void Pulse433::sendMsg(uint8_t *data, uint8_t msgSize) {
 	// generates checksum
-	data[7] = getCheckSum(data);
+	// data[7] = getCheckSum(data);
 	// message start / preamble
 	for(int i=0; i<3; i++) sendPulse();
 	// synch nimbles 11 10 01 00
 	sendByte(0xE4);
 	// 8 bytes data
-	for(int i=0; i<8; i++) sendByte(data[i]);
+	for(uint8_t i=0; i<msgSize; i++) sendByte(data[i]);
 	// message end
 	sendPulse();
 }

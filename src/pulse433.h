@@ -22,7 +22,7 @@ private:
 
 public:
 	Pulse433(Pin*);
-	void sendMsg(uint8_t *);
+	void sendMsg(uint8_t *, uint8_t msgSize);
 	void sendPulse();
 	void sendByte(uint8_t byte);
     uint8_t getCheckSum(uint8_t *data);
