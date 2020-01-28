@@ -7,11 +7,9 @@ Pulse433::Pulse433(Pin *pin){
 }
 
 void Pulse433::sendMsg(uint8_t *data, uint8_t msgSize) {
-	// generates checksum
-	// data[7] = getCheckSum(data);
 	// message start / preamble
 	for(int i=0; i<3; i++) sendPulse();
-	// synch nimbles 11 10 01 00
+	// Send the 4 synch nimbles 11 10 01 00
 	sendByte(0xE4);
 	// 8 bytes data
 	for(uint8_t i=0; i<msgSize; i++) sendByte(data[i]);
@@ -20,9 +18,9 @@ void Pulse433::sendMsg(uint8_t *data, uint8_t msgSize) {
 }
 
 void Pulse433::sendPulse(){
-	ctimer->waitMicros(600);
+	ctimer->waitMicros(420);
 	pin->write(1);
-	ctimer->waitMicros(600);
+	ctimer->waitMicros(1000);
 	pin->write(0);
 }
 

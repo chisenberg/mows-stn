@@ -29,23 +29,19 @@ int main(void)
 
 	while(1) {
 
-		ctimer->waitMillis(500);				
+		ctimer->waitMillis(1000);				
 		dht22->read();
 		ctimer->waitMillis(500);
 
 
 		// uin8_t battery
 		msg[0] = battery->readVoltage();
-		// uint16_t rain counter
 		msg[1] = interrupts->getRain() >> 8;
 		msg[2] = interrupts->getRain() & 0x00FF;
-		// uin16_t for temperature
 		msg[3] = dht22->temperature >> 8;
 		msg[4] = dht22->temperature & 0x00FF;
-		// uin16_t for humidity
 		msg[5] = dht22->humidity >> 8;
 		msg[6] = dht22->humidity & 0x00FF;
-		// uin16_t for wind counter
 		msg[7] = interrupts->getWind() >> 8;
 		msg[8] = interrupts->getWind() & 0x00FF;
 		// here goes wind direction in the future
