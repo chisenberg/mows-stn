@@ -9,6 +9,11 @@ Pin* Interrupt::pinWindSpd = 0;
 uint16_t Interrupt::counterRain = 0;
 uint16_t Interrupt::counterWindSpd = 0;
 
+
+// debounce milliseconds
+uint32_t Interrupt::lastMillisRain = 0;
+uint32_t Interrupt::lastMillisWindSpd = 0;
+
 // store pins last state
 uint8_t Interrupt::pinHistory = 0xFF;
 
@@ -23,20 +28,22 @@ Interrupt::Interrupt(){
 
 void Interrupt::handleInterrupt()
 {
-	// ctimer->millis();
+	uint32_t millis = ctimer->millis();
 	uint8_t changedbits = PINB ^ pinHistory;
 	pinHistory = PINB;
 
 	// rain interrupt
-	if(changedbits & (1 << PB0))
+	if(changedbits & (1 << PB0) && millis > lastMillisRain + 50)
 	{
 		counterRain++;
+		lastMillisRain = millis;
 	}
 
 	// wind interrupt
-	if(changedbits & (1 << PB1))
+	if(changedbits & (1 << PB1) && millis > lastMillisWindSpd + 50)
 	{
 		counterWindSpd++;
+		lastMillisWindSpd = millis;
 	}
 }
 

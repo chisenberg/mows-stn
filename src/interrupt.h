@@ -24,8 +24,13 @@ private:
 
 	static uint8_t pinHistory;
 
+	// counters
 	static uint16_t counterRain;
 	static uint16_t counterWindSpd;
+
+	// debounce milliseconds
+	static uint32_t lastMillisRain;
+	static uint32_t lastMillisWindSpd;
 
 };
 

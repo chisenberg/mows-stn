@@ -29,7 +29,7 @@ int main(void)
 
 	while(1) {
 
-		ctimer->waitMillis(1000);				
+		ctimer->waitMillis(5000);
 		dht22->read();
 		ctimer->waitMillis(500);
 
